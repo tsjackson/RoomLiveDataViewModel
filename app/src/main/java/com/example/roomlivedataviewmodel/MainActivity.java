@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     //Steps to make a Room Database
     // 1. Create a room entity, 2. Create the DAO,
     // 3. Add Room DB, 4. Create the Repository,
-    // 5. Create ViewModel, Add XML
+    // 5. Create ViewModel, 6. Add XML
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
