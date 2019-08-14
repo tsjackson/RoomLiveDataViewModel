@@ -26,20 +26,21 @@ public class WordRepository {
 
     // This is called a wrapper, this ones job is to return a cached
     // words as LiveData.
-    LiveData<List<Word>> getmAllWords(){return mAllWords;}
+    LiveData<List<Word>> getAllWords(){return mAllWords;}
 
     public void insert (Word word){
-        new insertAsyncTask(mWordDao).execute(word);
+        new InsertAsyncTask(mWordDao).execute(word);
     }
 
-    private static class insertAsyncTask extends AsyncTask<Word, Void, Void>{
+    private static class InsertAsyncTask extends AsyncTask<Word, Void, Void>{
         private WordDao mAsyncTaskDao;
 
-        insertAsyncTask(WordDao dao){
+        InsertAsyncTask(WordDao dao){
             mAsyncTaskDao = dao;
         }
         @Override
         protected Void doInBackground(final Word...params){
+            // this is inserting stuff into the database
             mAsyncTaskDao.insert(params[0]);
             return null;
         }
