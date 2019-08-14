@@ -13,6 +13,7 @@ public class WordViewModel extends AndroidViewModel {
     private LiveData<List<Word>> mAllWords;
 
     //constructor that gets a reference to the WordRepository and gets the list of all words from the WordRepository
+
     public WordViewModel (Application application) {
         super(application);
         mRepository = new WordRepository(application);
