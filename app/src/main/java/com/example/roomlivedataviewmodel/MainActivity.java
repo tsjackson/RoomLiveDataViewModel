@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Add RecyclerView
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
+
         final WordListAdapter adapter = new WordListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
